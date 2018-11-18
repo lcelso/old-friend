@@ -100,90 +100,252 @@
             <div class="col-lg-12 col-md-7">
                 <div class="card">
                     <div class="header">
-                        <h4 class="title">Edit Profile</h4>
+                        <h4 class="title">Cadastrar Usuário</h4>
                     </div>
                     <div class="content">
                         <form>
                             <div class="row">
-                                <div class="col-md-5">
+                                <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Company</label>
-                                        <input type="text" class="form-control border-input" disabled placeholder="Company" value="Creative Code Inc.">
+                                        <label for="registration">Matrícula</label>
+										<input type="text"
+											id="registration"
+                                            class="form-control border-input"
+                                            disabled
+                                            placeholder="Matrícula"
+                                            value="2018111901">
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="checkbox" [style.margin-top]="'35px'">
+                                        <input id="active" type="checkbox">
+                                        <label for="active">
+                                            Ativo
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="genre">Genêro</label>
+                                        <select id="genre" class="form-control border-input">
+                                            <option value="">Selecione</option>
+                                            <option value="mulher">Mulher</option>
+                                            <option value="homem">Homem</option>
+                                            <option value="outro">Outro</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Username</label>
-                                        <input type="text" class="form-control border-input" placeholder="Username" value="michael23">
+                                        <label for="date-cad">Data de Cadastro</label>
+										<input
+											id="date-cad"
+											type="date"
+											disabled
+											value="2018-11-19"
+                                            class="form-control border-input"
+                                            placeholder="Data de Cadastro">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <input type="email" class="form-control border-input" placeholder="Email">
+                                        <label for="lastUpdate">Última Atualização</label>
+										<input
+											id="lastUpdate"
+											type="date"
+											disabled
+											value="2018-11-19"
+                                            class="form-control border-input"
+                                            placeholder="Data de Cadastro">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                     <div class="form-group">
-                                        <label>First Name</label>
-                                        <input type="text" class="form-control border-input" placeholder="Company" value="Chet">
+                                        <label for="fullName">Nome Completo:</label>
+										<input type="text"
+											id="fullName"
+											class="form-control border-input"
+											placeholder="Nome Completo">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-2">
                                     <div class="form-group">
-                                        <label>Last Name</label>
-                                        <input type="text" class="form-control border-input" placeholder="Last Name" value="Faker">
+                                        <label for="nickname">Apelido</label>
+										<input type="text"
+											id="nickname"
+											class="form-control border-input"
+											placeholder="Apelido" />
                                     </div>
-                                </div>
-                            </div>
+								</div>
+
+								<div class="col-md-3">
+									<div class="form-group">
+										<label for="birthday">Data de Nascimento</label>
+										<input type="date"
+											id="birthday"
+											class="form-control border-input"
+											placeholder="Data de Nascimento" />
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<label for="age">Idade</label>
+										<input type="text"
+											id="age"
+											class="form-control border-input"
+											placeholder="Idade" />
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<label for="rg">RG:</label>
+										<input type="number"
+											id="rg"
+											class="form-control border-input"
+											placeholder="RG">
+									</div>
+								</div>
+
+								<div class="col-md-3">
+									<div class="form-group">
+										<label for="cpf">CPF:</label>
+										<input type="number"
+											id="cpf"
+											class="form-control border-input"
+											placeholder="CPF">
+									</div>
+								</div>
+
+								<div class="col-md-3">
+									<div class="form-group">
+										<label for="cel">Celular:</label>
+										<input type="number"
+											id="cel"
+											class="form-control border-input"
+											placeholder="Celular">
+									</div>
+								</div>
+
+								<div class="col-md-3">
+									<div class="form-group">
+										<label for="tel">Tel. Residencial:</label>
+										<input type="number"
+											id="tel"
+											class="form-control border-input"
+											placeholder="Tel. Residencial">
+									</div>
+								</div>
+							</div>
 
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-5">
                                     <div class="form-group">
-                                        <label>Address</label>
-                                        <input type="text" class="form-control border-input" placeholder="Home Address" value="Melbourne, Australia">
+                                        <label for="address">Endereço:</label>
+										<input type="text"
+											id="address"
+											class="form-control border-input"
+											placeholder="Endereço">
                                     </div>
-                                </div>
-                            </div>
+								</div>
 
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>City</label>
-                                        <input type="text" class="form-control border-input" placeholder="City" value="Melbourne">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Country</label>
-                                        <input type="text" class="form-control border-input" placeholder="Country" value="Australia">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Postal Code</label>
-                                        <input type="number" class="form-control border-input" placeholder="ZIP Code">
-                                    </div>
-                                </div>
-                            </div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="complement">Complemento:</label>
+										<input type="text"
+											id="complement"
+											class="form-control border-input"
+											placeholder="Complemento">
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label for="neighborhood">Bairro:</label>
+										<input type="text"
+											id="neighborhood"
+											class="form-control border-input"
+											placeholder="Bairro">
+									</div>
+								</div>
+							</div>
 
-                            <div class="row">
-                                <div class="col-md-12">
+							<div class="row">
+                                <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>About Me</label>
-                                        <textarea rows="5" class="form-control border-input" placeholder="Here can be your description" value="Mike">
-Oh so, your weak rhyme
-You doubt I'll bother, reading into it
-I'll probably won't, left to my own devices
-But that's the difference in our opinions.</textarea>
+                                        <label for="city">Cidade</label>
+										<input
+											type="text"
+											id="city"
+											class="form-control border-input"
+											placeholder="Cidade"
+											value="São Paulo">
                                     </div>
                                 </div>
-                            </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="uf">UF:</label>
+										<input
+											id="uf"
+											type="text"
+											class="form-control border-input"
+											placeholder="UF"
+											value="São Paulo">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="zipcode">CEP:</label>
+										<input
+											id="zipcode"
+											type="number"
+											class="form-control border-input"
+											placeholder="CEP">
+                                    </div>
+                                </div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="contactForScraps">Contato para Recados:</label>
+										<input
+											type="text"
+											id="contactForScraps"
+											class="form-control border-input"
+											placeholder="Contato para Recados:">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="scrapsContact">Tel. Contato:</label>
+										<input
+											id="scrapsContact"
+											type="number"
+											class="form-control border-input"
+											placeholder="Tel. Contato">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="institution">Instituição:</label>
+										<input
+											id="institution"
+											type="text"
+											class="form-control border-input"
+											placeholder="Instituição">
+									</div>
+								</div>
+							</div>
+
                             <div class="text-center">
-                                <button type="submit" class="btn btn-info btn-fill btn-wd">Update Profile</button>
+								<button
+									type="submit"
+									class="btn btn-info btn-fill btn-wd">Salvar</button>
                             </div>
                             <div class="clearfix"></div>
                         </form>
