@@ -1,257 +1,294 @@
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-4 col-md-5">
-                <!-- <div class="card card-user">
-                    <div class="image">
-                        <img src="assets/img/background.jpg" alt="..."/>
-                    </div>
-                    <div class="content">
-                        <div class="author">
-                          <img class="avatar border-white" src="assets/img/faces/face-2.jpg" alt="..."/>
-                          <h4 class="title">Chet Faker<br />
-                             <a href="#"><small>@chetfaker</small></a>
-                          </h4>
-                        </div>
-                        <p class="description text-center">
-                            "I like the way you work it <br>
-                            No diggity <br>
-                            I wanna bag it up"
-                        </p>
-                    </div>
-                    <hr>
-                    <div class="text-center">
-                        <div class="row">
-                            <div class="col-md-3 col-md-offset-1">
-                                <h5>12<br /><small>Files</small></h5>
-                            </div>
-                            <div class="col-md-4">
-                                <h5>2GB<br /><small>Used</small></h5>
-                            </div>
-                            <div class="col-md-3">
-                                <h5>24,6$<br /><small>Spent</small></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="card">
-                    <div class="header">
-                        <h4 class="title">Team Members</h4>
-                    </div>
-                    <div class="content">
-                        <ul class="list-unstyled team-members">
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-xs-3">
-                                                <div class="avatar">
-                                                    <img src="assets/img/faces/face-0.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                DJ Khaled
-                                                <br />
-                                                <span class="text-muted"><small>Offline</small></span>
-                                            </div>
 
-                                            <div class="col-xs-3 text-right">
-                                                <button class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-xs-3">
-                                                <div class="avatar">
-                                                    <img src="assets/img/faces/face-1.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                Creative Tim
-                                                <br />
-                                                <span class="text-success"><small>Available</small></span>
-                                            </div>
-
-                                            <div class="col-xs-3 text-right">
-                                                <button class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-xs-3">
-                                                <div class="avatar">
-                                                    <img src="assets/img/faces/face-3.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                Flume
-                                                <br />
-                                                <span class="text-danger"><small>Busy</small></span>
-                                            </div>
-
-                                            <div class="col-xs-3 text-right">
-                                                <button class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                    </div>
-                </div> -->
-            </div>
-            <div class="col-lg-12 col-md-7">
-                <div class="card">
-                    <div class="header">
-                        <h4 class="title">Cadastrar Usuário</h4>
-                    </div>
-                    <div class="content">
-                        <form>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="registration">Matrícula</label>
-										<input type="text"
-											id="registration"
-                                            class="form-control border-input"
-                                            disabled
-                                            placeholder="Matrícula"
-                                            value="2018111901">
-                                    </div>
-                                </div>
-                                <div class="col-md-1">
-                                    <div class="checkbox" [style.margin-top]="'35px'">
-                                        <input id="active" type="checkbox">
-                                        <label for="active">
-                                            Ativo
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="genre">Genêro</label>
-                                        <select id="genre" class="form-control border-input">
-                                            <option value="">Selecione</option>
-                                            <option value="mulher">Mulher</option>
-                                            <option value="homem">Homem</option>
-                                            <option value="outro">Outro</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="date-cad">Data de Cadastro</label>
-										<input
-											id="date-cad"
-											type="date"
-											disabled
-											value="2018-11-19"
-                                            class="form-control border-input"
-                                            placeholder="Data de Cadastro">
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="lastUpdate">Última Atualização</label>
-										<input
-											id="lastUpdate"
-											type="date"
-											disabled
-											value="2018-11-19"
-                                            class="form-control border-input"
-                                            placeholder="Data de Cadastro">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label for="fullName">Nome Completo:</label>
-										<input type="text"
-											id="fullName"
-											class="form-control border-input"
-											placeholder="Nome Completo">
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="nickname">Apelido</label>
-										<input type="text"
-											id="nickname"
-											class="form-control border-input"
-											placeholder="Apelido" />
-                                    </div>
+<div class="container-fluid">
+	<div class="row">
+			<div class="col-lg-4 col-md-5">
+					<div class="card card-user">
+						<div class="image">
+							<img src="assets/img/background.jpg" alt="..."/>
+						</div>
+						<div class="content">
+							<div class="author">
+							  <img class="avatar border-white" src="assets/img/faces/face-2.jpg" alt="..."/>
+							  <h4 class="title">Chet Faker<br />
+								 <a href="#"><small>@chetfaker</small></a>
+							  </h4>
+							</div>
+							<p class="description text-center">
+								"I like the way you work it <br>
+								No diggity <br>
+								I wanna bag it up"
+							</p>
+						</div>
+						<hr>
+						<div class="text-center">
+							<div class="row">
+								<div class="col-md-3 col-md-offset-1">
+									<h5>12<br /><small>Files</small></h5>
 								</div>
-
+								<div class="col-md-4">
+									<h5>2GB<br /><small>Used</small></h5>
+								</div>
 								<div class="col-md-3">
-									<div class="form-group">
-										<label for="birthday">Data de Nascimento</label>
-										<input type="date"
-											id="birthday"
-											class="form-control border-input"
-											placeholder="Data de Nascimento" />
-									</div>
-								</div>
-								<div class="col-md-2">
-									<div class="form-group">
-										<label for="age">Idade</label>
-										<input type="text"
-											id="age"
-											class="form-control border-input"
-											placeholder="Idade" />
-									</div>
+									<h5>24,6$<br /><small>Spent</small></h5>
 								</div>
 							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="header">
+							<h4 class="title">Team Members</h4>
+						</div>
+						<div class="content">
+							<ul class="list-unstyled team-members">
+										<li>
+											<div class="row">
+												<div class="col-xs-3">
+													<div class="avatar">
+														<img src="assets/img/faces/face-0.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+													</div>
+												</div>
+												<div class="col-xs-6">
+													DJ Khaled
+													<br />
+													<span class="text-muted"><small>Offline</small></span>
+												</div>
 
+												<div class="col-xs-3 text-right">
+													<button class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></button>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="row">
+												<div class="col-xs-3">
+													<div class="avatar">
+														<img src="assets/img/faces/face-1.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+													</div>
+												</div>
+												<div class="col-xs-6">
+													Creative Tim
+													<br />
+													<span class="text-success"><small>Available</small></span>
+												</div>
+
+												<div class="col-xs-3 text-right">
+													<button class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></button>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="row">
+												<div class="col-xs-3">
+													<div class="avatar">
+														<img src="assets/img/faces/face-3.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+													</div>
+												</div>
+												<div class="col-xs-6">
+													Flume
+													<br />
+													<span class="text-danger"><small>Busy</small></span>
+												</div>
+
+												<div class="col-xs-3 text-right">
+													<button class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></button>
+												</div>
+											</div>
+										</li>
+									</ul>
+						</div>
+					</div>
+				</div>
+		<div class="col-lg-12 col-md-7">
+			<div class="card">
+				<div class="header">
+					<h4 class="title">{{ title }}</h4>
+				</div>
+				<div class="content">
+					<div [hidden]="submitted">
+						<form (ngSubmit)="onSubmit()">
 							<div class="row">
 								<div class="col-md-3">
 									<div class="form-group">
-										<label for="rg">RG:</label>
-										<input type="number"
-											id="rg"
+										<label for="regis">Matricula:</label>
+										<input type="text"
 											class="form-control border-input"
-											placeholder="RG">
+											id="regis"
+
+											disabled
+											[(ngModel)]="registration"
+											placeholder="Matrícula"
+											name="registration">
+									</div>
+								</div>
+								<div class="col-md-1">
+									<div class="checkbox" [style.margin-top]="'35px'">
+										<input id="active"
+											[(ngModel)]="users.active"
+											checked="checked"
+											[ngModelOptions]="{standalone: true}"
+											type="checkbox" />
+										<label for="active">
+											Ativo
+										</label>
+									</div>
+								</div>
+
+								<div class="col-md-2">
+									<div class="form-group">
+										<label for="genero">Gênero:</label>
+										<select  class="form-control border-input"
+											id="genero"
+											required
+											[(ngModel)]="users.genero"
+											name="genero">
+											<option value="" disabled>--Selecione--</option>
+											<option value="homem">Homem</option>
+											<option value="mulher">Mulher</option>
+											<option value="outro">Outro</option>
+										</select>
 									</div>
 								</div>
 
 								<div class="col-md-3">
 									<div class="form-group">
-										<label for="cpf">CPF:</label>
-										<input type="number"
-											id="cpf"
+										<label for="dataCadastro">Data de Cadastro</label>
+										<input
+											id="dataCadastro"
+											type="date"
+											disabled
+
+											[(ngModel)]="dateCad"
+											name="dateCad"
 											class="form-control border-input"
-											placeholder="CPF">
+											placeholder="Data de Cadastro">
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label for="lastUpdate">Última Atualização</label>
+										<input type="date"
+											class="form-control border-input"
+											id="lastUpdate"
+											disabled
+
+											[(ngModel)]="dateAct"
+											placeholder="Matrícula"
+											placeholder="Data de Cadastro"
+											name="dateAct">
 									</div>
 								</div>
 
-								<div class="col-md-3">
-									<div class="form-group">
-										<label for="cel">Celular:</label>
-										<input type="number"
-											id="cel"
-											class="form-control border-input"
-											placeholder="Celular">
-									</div>
-								</div>
-
-								<div class="col-md-3">
-									<div class="form-group">
-										<label for="tel">Tel. Residencial:</label>
-										<input type="number"
-											id="tel"
-											class="form-control border-input"
-											placeholder="Tel. Residencial">
-									</div>
-								</div>
 							</div>
 
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label for="address">Endereço:</label>
+							<div class="row">
+									<div class="col-md-5">
+										<div class="form-group">
+											<label for="fullName">Nome Completo:</label>
+											<input type="text"
+												id="fullName"
+												[(ngModel)]="users.name"
+												name="name"
+												class="form-control border-input"
+												placeholder="Nome Completo">
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label for="nickname">Apelido</label>
+											<input type="text"
+												id="nickname"
+												[(ngModel)]="users.nickname"
+												name="nickname"
+												class="form-control border-input"
+												placeholder="Apelido" />
+										</div>
+									</div>
+
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="birthday">Data de Nascimento</label>
+											<input type="date"
+												id="birthday"
+												[(ngModel)]="users.birthday"
+												name="birthday"
+												class="form-control border-input"
+												placeholder="Data de Nascimento" />
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label for="age">Idade</label>
+											<input type="text"
+												id="age"
+												[(ngModel)]="users.age"
+												name="age"
+												class="form-control border-input"
+												placeholder="Idade" />
+										</div>
+									</div>
+							</div>
+
+							<div class="row">
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="rg">RG:</label>
+											<input type="number"
+												id="rg"
+												[(ngModel)]="users.rg"
+												name="rg"
+												class="form-control border-input"
+												placeholder="RG">
+										</div>
+									</div>
+
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="cpf">CPF:</label>
+											<input type="number"
+												id="cpf"
+												[(ngModel)]="users.cpf"
+												name="cpf"
+												class="form-control border-input"
+												placeholder="CPF">
+										</div>
+									</div>
+
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="cel">Celular:</label>
+											<input type="number"
+												id="cel"
+												[(ngModel)]="users.cel"
+												name="cel"
+												class="form-control border-input"
+												placeholder="Celular">
+										</div>
+									</div>
+
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="tel">Tel. Residencial:</label>
+											<input type="number"
+												id="tel"
+												[(ngModel)]="users.tel"
+												name="tel"
+												class="form-control border-input"
+												placeholder="Tel. Residencial">
+										</div>
+									</div>
+								</div>
+
+							<div class="row">
+								<div class="col-md-5">
+									<div class="form-group">
+										<label for="address">Endereço:</label>
 										<input type="text"
 											id="address"
+											[(ngModel)]="users.address"
+											name="address"
 											class="form-control border-input"
 											placeholder="Endereço">
-                                    </div>
+									</div>
 								</div>
 
 								<div class="col-md-4">
@@ -259,6 +296,8 @@
 										<label for="complement">Complemento:</label>
 										<input type="text"
 											id="complement"
+											[(ngModel)]="users.complement"
+											name="complement"
 											class="form-control border-input"
 											placeholder="Complemento">
 									</div>
@@ -268,6 +307,8 @@
 										<label for="neighborhood">Bairro:</label>
 										<input type="text"
 											id="neighborhood"
+											[(ngModel)]="users.neighborhood"
+											name="neighborhood"
 											class="form-control border-input"
 											placeholder="Bairro">
 									</div>
@@ -275,38 +316,44 @@
 							</div>
 
 							<div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="city">Cidade</label>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="city">Cidade</label>
 										<input
 											type="text"
 											id="city"
+											[(ngModel)]="users.city"
+											name="city"
 											class="form-control border-input"
 											placeholder="Cidade"
 											value="São Paulo">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="uf">UF:</label>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="uf">UF:</label>
 										<input
 											id="uf"
 											type="text"
+											[(ngModel)]="users.uf"
+											name="uf"
 											class="form-control border-input"
 											placeholder="UF"
 											value="São Paulo">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="zipcode">CEP:</label>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="zipcode">CEP:</label>
 										<input
 											id="zipcode"
 											type="number"
+											[(ngModel)]="users.zipcode"
+											name="zipcode"
 											class="form-control border-input"
 											placeholder="CEP">
-                                    </div>
-                                </div>
+									</div>
+								</div>
 							</div>
 
 							<div class="row">
@@ -316,6 +363,8 @@
 										<input
 											type="text"
 											id="contactForScraps"
+											[(ngModel)]="users.contactForScraps"
+											name="contactForScraps"
 											class="form-control border-input"
 											placeholder="Contato para Recados:">
 									</div>
@@ -326,6 +375,8 @@
 										<input
 											id="scrapsContact"
 											type="number"
+											[(ngModel)]="users.scrapsContact"
+											name="scrapsContact"
 											class="form-control border-input"
 											placeholder="Tel. Contato">
 									</div>
@@ -336,23 +387,39 @@
 										<input
 											id="institution"
 											type="text"
+											[(ngModel)]="users.institution"
+											name="institution"
 											class="form-control border-input"
 											placeholder="Instituição">
 									</div>
 								</div>
 							</div>
 
-                            <div class="text-center">
+							<div *ngIf="!isEdit" class="text-center">
 								<button
 									type="submit"
 									class="btn btn-info btn-fill btn-wd">Salvar</button>
-                            </div>
-                            <div class="clearfix"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+							</div>
+
+							<div *ngIf="isEdit" class="text-center">
+								<button
+									(click)="updateUser(user)"
+									class="btn btn-info btn-fill btn-wd">Salvar Edição</button>
+							</div>
 
 
-        </div>
-    </div>
+							<div class="clearfix"></div>
+						</form>
+					</div>
+
+
+
+					<div [hidden]="!submitted">
+						<h4>{{ subtitle }}</h4>
+						<button class="btn btn-success" (click)="newUser()">Adicionar Novo</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

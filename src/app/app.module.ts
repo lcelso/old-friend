@@ -1,39 +1,64 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
+import { segmentReducer } from './state-management/reducers/segment.reducer';
 
 import { AppComponent } from './app.component';
-import { AppRoutes } from './app.routing';
+import { environment } from '../environments/environment';
+import { SharedModule } from './shared/shared.module';
+import { AppRoutingModule } from '../app/app.routing';
+
 import { SidebarModule } from './sidebar/sidebar.module';
 import { FooterModule } from './shared/footer/footer.module';
-import { NavbarModule} from './shared/navbar/navbar.module';
-import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
+import { NavbarModule } from './shared/navbar/navbar.module';
+import { NavbarIntModule } from './shared/navbar-int/navbar-int.module';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { FixedPluginModule } from './shared/fixedplugin/fixedplugin.module';
+
 import { UserComponent } from './user/user.component';
-import { TableComponent } from './table/table.component';
-import { TypographyComponent } from './typography/typography.component';
-import { IconsComponent } from './icons/icons.component';
-import { NotificationsComponent } from './notifications/notifications.component';
+import { UserListComponent } from './user/list/list.component';
+
+// import { DashboAppRoutingModuleardComponent } from './dashboard/dashboard.component';
+// import { TableComponent } from './table/table.component';
+// import { TypographyComponent } from './typography/typography.component';
+// import { IconsComponent } from './icons/icons.component';
+// import { NotificationsComponent } from './notifications/notifications.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     UserComponent,
-    TableComponent,
-    TypographyComponent,
-    IconsComponent,
-    NotificationsComponent,
+    UserListComponent,
+    // DashboardComponent,
+    // TableComponent,
+    // TypographyComponent,
+    // IconsComponent,
+    // NotificationsComponent,
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    StoreModule.forRoot({
+      segmentReducer: segmentReducer
+    }),
+    StoreDevtoolsModule.instrument(),
     BrowserModule,
-    RouterModule.forRoot(AppRoutes),
+    AppRoutingModule,
     SidebarModule,
     NavbarModule,
+    NavbarIntModule,
     FooterModule,
     FixedPluginModule,
-
+    FormsModule,
+    CommonModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

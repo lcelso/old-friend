@@ -364,15 +364,14 @@ hr {
 }
 .sidebar .logo-img,
 .off-canvas-sidebar .logo-img {
-  width: 42px;
-  max-height: 42px;
+  width: 112px;
+  height: 93px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 .sidebar .logo-img img,
 .off-canvas-sidebar .logo-img img {
-  width: 42px;
-  top: 16px;
-  left: 18px;
-  position: absolute;
+  width: 112px;
 }
 .sidebar .logo,
 .off-canvas-sidebar .logo {
@@ -554,7 +553,6 @@ hr {
 .main-panel {
   background-color: #f4f3ef;
   position: relative;
-  z-index: 2;
   float: right;
   width: calc(100% - 260px);
   min-height: 100%;
