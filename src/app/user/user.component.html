@@ -1,7 +1,7 @@
 
 <div class="container-fluid">
 	<div class="row">
-			<div class="col-lg-4 col-md-5">
+			<!-- <div class="col-lg-4 col-md-5">
 					<div class="card card-user">
 						<div class="image">
 							<img src="assets/img/background.jpg" alt="..."/>
@@ -97,7 +97,7 @@
 									</ul>
 						</div>
 					</div>
-				</div>
+				</div> -->
 		<div class="col-lg-12 col-md-7">
 			<div class="card">
 				<div class="header">
@@ -106,294 +106,539 @@
 				<div class="content">
 					<div [hidden]="submitted">
 						<form (ngSubmit)="onSubmit()">
-							<div class="row">
-								<div class="col-md-3">
-									<div class="form-group">
-										<label for="regis">Matricula:</label>
-										<input type="text"
-											class="form-control border-input"
-											id="regis"
+							<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+								<li class="nav-item active">
+									<a class="nav-link active"
+										id="geral-tab"
+										data-toggle="pill"
+										href="#pills-home" role="tab"
+										aria-controls="pills-home"
+										aria-selected="true">Geral</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link"
+										id="pills-profile-tab"
+										data-toggle="pill"
+										href="#pills-profile"
+										role="tab"
+										aria-controls="pills-profile"
+										aria-selected="false">Informações Complementares</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link"
+										id="pills-saude-tab"
+										data-toggle="pill"
+										href="#pills-saude"
+										role="tab"
+										aria-controls="pills-profile"
+										aria-selected="false">Saúde</a>
+								</li>
+							</ul>
+							<div class="tab-content" id="pills-tabContent">
+								<div class="tab-pane fade active in"
+									id="pills-home" role="tabpanel"
+									aria-labelledby="geral-tab">
 
-											disabled
-											[(ngModel)]="registration"
-											placeholder="Matrícula"
-											name="registration">
+									<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="regis">Matricula:</label>
+													<input type="text"
+														class="form-control border-input"
+														id="regis"
+
+														disabled
+														[(ngModel)]="registration"
+														placeholder="Matrícula"
+														name="registration">
+												</div>
+											</div>
+											<div class="col-md-1">
+												<div class="checkbox" [style.margin-top]="'35px'">
+													<input id="active"
+														[(ngModel)]="users.active"
+														checked="checked"
+														[ngModelOptions]="{standalone: true}"
+														type="checkbox" />
+													<label for="active">
+														Ativo
+													</label>
+												</div>
+											</div>
+
+											<div class="col-md-2">
+												<div class="form-group">
+													<label for="genero">Gênero:</label>
+													<select  class="form-control border-input"
+														id="genero"
+														required
+														[(ngModel)]="users.genero"
+														name="genero">
+														<option value="" disabled>--Selecione--</option>
+														<option value="homem">Homem</option>
+														<option value="mulher">Mulher</option>
+														<option value="outro">Outro</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="dataCadastro">Data de Cadastro</label>
+													<input
+														id="dataCadastro"
+														type="date"
+														disabled
+
+														[(ngModel)]="users.dateCad"
+														name="dateCad"
+														class="form-control border-input"
+														placeholder="Data de Cadastro">
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="lastUpdate">Última Atualização</label>
+													<input type="date"
+														class="form-control border-input"
+														id="lastUpdate"
+														disabled
+
+														[(ngModel)]="dateAct"
+														placeholder="Matrícula"
+														placeholder="Data de Cadastro"
+														name="dateAct">
+												</div>
+											</div>
+
 									</div>
-								</div>
-								<div class="col-md-1">
-									<div class="checkbox" [style.margin-top]="'35px'">
-										<input id="active"
-											[(ngModel)]="users.active"
-											checked="checked"
-											[ngModelOptions]="{standalone: true}"
-											type="checkbox" />
-										<label for="active">
-											Ativo
-										</label>
+
+									<div class="row">
+											<div class="col-md-5">
+												<div class="form-group">
+													<label for="fullName">Nome Completo:</label>
+													<input type="text"
+														id="fullName"
+														[(ngModel)]="users.name"
+														name="name"
+														class="form-control border-input"
+														placeholder="Nome Completo">
+												</div>
+											</div>
+											<div class="col-md-2">
+												<div class="form-group">
+													<label for="nickname">Apelido</label>
+													<input type="text"
+														id="nickname"
+														[(ngModel)]="users.nickname"
+														name="nickname"
+														class="form-control border-input"
+														placeholder="Apelido" />
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="birthday">Data de Nascimento</label>
+													<input type="date"
+														id="birthday"
+														[(ngModel)]="users.birthday"
+														name="birthday"
+														class="form-control border-input"
+														placeholder="Data de Nascimento" />
+												</div>
+											</div>
+											<div class="col-md-2">
+												<div class="form-group">
+													<label for="age">Idade</label>
+													<input type="text"
+														id="age"
+														[(ngModel)]="users.age"
+														name="age"
+														class="form-control border-input"
+														placeholder="Idade" />
+												</div>
+											</div>
 									</div>
-								</div>
 
-								<div class="col-md-2">
-									<div class="form-group">
-										<label for="genero">Gênero:</label>
-										<select  class="form-control border-input"
-											id="genero"
-											required
-											[(ngModel)]="users.genero"
-											name="genero">
-											<option value="" disabled>--Selecione--</option>
-											<option value="homem">Homem</option>
-											<option value="mulher">Mulher</option>
-											<option value="outro">Outro</option>
-										</select>
+									<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="rg">RG:</label>
+													<input type="number"
+														id="rg"
+														[(ngModel)]="users.rg"
+														name="rg"
+														class="form-control border-input"
+														placeholder="RG">
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="cpf">CPF:</label>
+													<input type="number"
+														id="cpf"
+														[(ngModel)]="users.cpf"
+														name="cpf"
+														class="form-control border-input"
+														placeholder="CPF">
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="cel">Celular:</label>
+													<input type="number"
+														id="cel"
+														[(ngModel)]="users.cel"
+														name="cel"
+														class="form-control border-input"
+														placeholder="Celular">
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="tel">Tel. Residencial:</label>
+													<input type="number"
+														id="tel"
+														[(ngModel)]="users.tel"
+														name="tel"
+														class="form-control border-input"
+														placeholder="Tel. Residencial">
+												</div>
+											</div>
 									</div>
-								</div>
 
-								<div class="col-md-3">
-									<div class="form-group">
-										<label for="dataCadastro">Data de Cadastro</label>
-										<input
-											id="dataCadastro"
-											type="date"
-											disabled
+									<div class="row">
+										<div class="col-md-5">
+											<div class="form-group">
+												<label for="address">Endereço:</label>
+												<input type="text"
+													id="address"
+													[(ngModel)]="users.address"
+													name="address"
+													class="form-control border-input"
+													placeholder="Endereço">
+											</div>
+										</div>
 
-											[(ngModel)]="dateCad"
-											name="dateCad"
-											class="form-control border-input"
-											placeholder="Data de Cadastro">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="complement">Complemento:</label>
+												<input type="text"
+													id="complement"
+													[(ngModel)]="users.complement"
+													name="complement"
+													class="form-control border-input"
+													placeholder="Complemento">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<label for="neighborhood">Bairro:</label>
+												<input type="text"
+													id="neighborhood"
+													[(ngModel)]="users.neighborhood"
+													name="neighborhood"
+													class="form-control border-input"
+													placeholder="Bairro">
+											</div>
+										</div>
 									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="form-group">
-										<label for="lastUpdate">Última Atualização</label>
-										<input type="date"
-											class="form-control border-input"
-											id="lastUpdate"
-											disabled
 
-											[(ngModel)]="dateAct"
-											placeholder="Matrícula"
-											placeholder="Data de Cadastro"
-											name="dateAct">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="city">Cidade</label>
+												<input
+													type="text"
+													id="city"
+													[(ngModel)]="users.city"
+													name="city"
+													class="form-control border-input"
+													placeholder="Cidade"
+													value="São Paulo">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="uf">UF:</label>
+												<input
+													id="uf"
+													type="text"
+													[(ngModel)]="users.uf"
+													name="uf"
+													class="form-control border-input"
+													placeholder="UF"
+													value="São Paulo">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="zipcode">CEP:</label>
+												<input
+													id="zipcode"
+													type="number"
+													[(ngModel)]="users.zipcode"
+													name="zipcode"
+													class="form-control border-input"
+													placeholder="CEP">
+											</div>
+										</div>
 									</div>
+
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="institution">Instituição:</label>
+												<input
+													id="institution"
+													type="text"
+													[(ngModel)]="users.institution"
+													name="institution"
+													class="form-control border-input"
+													placeholder="Instituição">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<label for="contactForScraps">Contato para Recados:</label>
+												<input
+													type="text"
+													id="contactForScraps"
+													[(ngModel)]="users.contactForScraps"
+													name="contactForScraps"
+													class="form-control border-input"
+													placeholder="Contato para Recados:">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<label for="scrapsContact">Tel. Contato:</label>
+												<input
+													id="scrapsContact"
+													type="number"
+													[(ngModel)]="users.scrapsContact"
+													name="scrapsContact"
+													class="form-control border-input"
+													placeholder="Tel. Contato">
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="tab-pane fade"
+									id="pills-profile" role="tabpanel"
+									aria-labelledby="pills-profile-tab">
+
+									<div class="row">
+										<div class="col-md-3">
+											<div class="form-group">
+												<label for="email">E-Mail:</label>
+												<input type="text"
+													class="form-control border-input"
+													id="email"
+													[(ngModel)]="users.email"
+													placeholder="E-Mail"
+													name="email">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<div class="custom-control custom-radio">
+													<input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+													<label class="custom-control-label" for="defaultChecked">Default checked</label>
+												</div>
+												<label for="retirement">Possui Aposentadoria:</label>
+												<select  class="form-control border-input"
+													id="retirement"
+													required
+													[(ngModel)]="users.retirement"
+													name="retirement">
+													<option value="" disabled selected>--Selecione--</option>
+													<option value="sim">Sim</option>
+													<option value="nao">Não</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label for="dwelling">Condições de Moradia:</label>
+												<select  class="form-control border-input"
+													id="dwelling"
+													required
+													[(ngModel)]="users.dwelling"
+													name="dwelling">
+													<option value="" disabled>--Selecione--</option>
+													<option value="propria">Própria</option>
+													<option value="aluguel">Aluguel</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label for="shooling">Escolaridade:</label>
+												<select  class="form-control border-input"
+													id="shooling"
+													required
+													[(ngModel)]="users.shooling"
+													name="shooling">
+													<option value="" disabled>--Selecione--</option>
+													<option value="ensinoFundamental">Ensino Fundamental</option>
+													<option value="ensinoMedio">Ensino Médio</option>
+													<option value="superior">Superior</option>
+													<option value="mestrado">Mestrado</option>
+													<option value="doutorado">Doutorado</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="professionalActivity">Atividade profissional já realizada:</label>
+												<input type="text"
+													class="form-control border-input"
+													id="professionalActivity"
+													[(ngModel)]="users.professionalActivity"
+													placeholder="Atividade profissional já realizada"
+													name="professionalActivity">
+											</div>
+										</div>
+
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="resourceInflows">Formas de entradas de recursos:</label>
+												<input type="text"
+													class="form-control border-input"
+													id="resourceInflows"
+													[(ngModel)]="users.resourceInflows"
+													placeholder="Formas de entradas de recursos"
+													name="resourceInflows">
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="reasonsToParticipate">Motivos para participar</label>
+												<input type="text"
+													class="form-control border-input"
+													id="reasonsToParticipate"
+													[(ngModel)]="users.reasonsToParticipate"
+													placeholder="Motivos para participar"
+													name="reasonsToParticipate">
+											</div>
+										</div>
+
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="kernel">Como soube do núcleo:</label>
+												<input type="text"
+													class="form-control border-input"
+													id="kernel"
+													[(ngModel)]="users.kernel"
+													placeholder="Como soube do núcleo"
+													name="kernel">
+											</div>
+										</div>
+
+									</div>
+
+									<div class="row">
+										<div class="content">
+											<h5>Dados da vestimenta</h5>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="shirt">camisa:</label>
+													<select  class="form-control border-input"
+														id="shirt"
+														required
+														[(ngModel)]="users.shirt"
+														name="shirt">
+														<option value="" disabled>--Selecione--</option>
+														<option value="p">P</option>
+														<option value="m">M</option>
+														<option value="g">G</option>
+														<option value="gg">GG</option>
+														<option value="extraG">Extra G</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="pants">calça:</label>
+													<select  class="form-control border-input"
+														id="pants"
+														required
+														[(ngModel)]="users.pants"
+														name="pants">
+
+														<option *ngFor="let value of numberPants" [value]="value">
+															{{ value }}
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="shoes">sapato:</label>
+													<select  class="form-control border-input"
+														id="shoes"
+														required
+														[(ngModel)]="users.shoes"
+														name="shoes">
+
+														<option *ngFor="let value of numberShoes" [value]="value">
+															{{ value }}
+														</option>
+													</select>
+												</div>
+											</div>
+
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="shoes">vestido:</label>
+													<select  class="form-control border-input"
+														id="dress"
+														required
+														[(ngModel)]="users.dress"
+														name="dress">
+
+														<option value="" disabled>--Selecione--</option>
+														<option value="p">P</option>
+														<option value="m">M</option>
+														<option value="g">G</option>
+														<option value="gg">GG</option>
+														<option value="extraG">Extra G</option>
+													</select>
+												</div>
+											</div>
+
+
+
+										</div>
+									</div>
+
 								</div>
 
+								<div class="tab-pane fade" id="pills-saude" role="tabpanel" aria-labelledby="pill-saude-tab">
+									saude
+								</div>
 							</div>
 
-							<div class="row">
-									<div class="col-md-5">
-										<div class="form-group">
-											<label for="fullName">Nome Completo:</label>
-											<input type="text"
-												id="fullName"
-												[(ngModel)]="users.name"
-												name="name"
-												class="form-control border-input"
-												placeholder="Nome Completo">
-										</div>
-									</div>
-									<div class="col-md-2">
-										<div class="form-group">
-											<label for="nickname">Apelido</label>
-											<input type="text"
-												id="nickname"
-												[(ngModel)]="users.nickname"
-												name="nickname"
-												class="form-control border-input"
-												placeholder="Apelido" />
-										</div>
-									</div>
 
-									<div class="col-md-3">
-										<div class="form-group">
-											<label for="birthday">Data de Nascimento</label>
-											<input type="date"
-												id="birthday"
-												[(ngModel)]="users.birthday"
-												name="birthday"
-												class="form-control border-input"
-												placeholder="Data de Nascimento" />
-										</div>
-									</div>
-									<div class="col-md-2">
-										<div class="form-group">
-											<label for="age">Idade</label>
-											<input type="text"
-												id="age"
-												[(ngModel)]="users.age"
-												name="age"
-												class="form-control border-input"
-												placeholder="Idade" />
-										</div>
-									</div>
-							</div>
-
-							<div class="row">
-									<div class="col-md-3">
-										<div class="form-group">
-											<label for="rg">RG:</label>
-											<input type="number"
-												id="rg"
-												[(ngModel)]="users.rg"
-												name="rg"
-												class="form-control border-input"
-												placeholder="RG">
-										</div>
-									</div>
-
-									<div class="col-md-3">
-										<div class="form-group">
-											<label for="cpf">CPF:</label>
-											<input type="number"
-												id="cpf"
-												[(ngModel)]="users.cpf"
-												name="cpf"
-												class="form-control border-input"
-												placeholder="CPF">
-										</div>
-									</div>
-
-									<div class="col-md-3">
-										<div class="form-group">
-											<label for="cel">Celular:</label>
-											<input type="number"
-												id="cel"
-												[(ngModel)]="users.cel"
-												name="cel"
-												class="form-control border-input"
-												placeholder="Celular">
-										</div>
-									</div>
-
-									<div class="col-md-3">
-										<div class="form-group">
-											<label for="tel">Tel. Residencial:</label>
-											<input type="number"
-												id="tel"
-												[(ngModel)]="users.tel"
-												name="tel"
-												class="form-control border-input"
-												placeholder="Tel. Residencial">
-										</div>
-									</div>
-								</div>
-
-							<div class="row">
-								<div class="col-md-5">
-									<div class="form-group">
-										<label for="address">Endereço:</label>
-										<input type="text"
-											id="address"
-											[(ngModel)]="users.address"
-											name="address"
-											class="form-control border-input"
-											placeholder="Endereço">
-									</div>
-								</div>
-
-								<div class="col-md-4">
-									<div class="form-group">
-										<label for="complement">Complemento:</label>
-										<input type="text"
-											id="complement"
-											[(ngModel)]="users.complement"
-											name="complement"
-											class="form-control border-input"
-											placeholder="Complemento">
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="form-group">
-										<label for="neighborhood">Bairro:</label>
-										<input type="text"
-											id="neighborhood"
-											[(ngModel)]="users.neighborhood"
-											name="neighborhood"
-											class="form-control border-input"
-											placeholder="Bairro">
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-md-4">
-									<div class="form-group">
-										<label for="city">Cidade</label>
-										<input
-											type="text"
-											id="city"
-											[(ngModel)]="users.city"
-											name="city"
-											class="form-control border-input"
-											placeholder="Cidade"
-											value="São Paulo">
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<label for="uf">UF:</label>
-										<input
-											id="uf"
-											type="text"
-											[(ngModel)]="users.uf"
-											name="uf"
-											class="form-control border-input"
-											placeholder="UF"
-											value="São Paulo">
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<label for="zipcode">CEP:</label>
-										<input
-											id="zipcode"
-											type="number"
-											[(ngModel)]="users.zipcode"
-											name="zipcode"
-											class="form-control border-input"
-											placeholder="CEP">
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-md-4">
-									<div class="form-group">
-										<label for="contactForScraps">Contato para Recados:</label>
-										<input
-											type="text"
-											id="contactForScraps"
-											[(ngModel)]="users.contactForScraps"
-											name="contactForScraps"
-											class="form-control border-input"
-											placeholder="Contato para Recados:">
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<label for="scrapsContact">Tel. Contato:</label>
-										<input
-											id="scrapsContact"
-											type="number"
-											[(ngModel)]="users.scrapsContact"
-											name="scrapsContact"
-											class="form-control border-input"
-											placeholder="Tel. Contato">
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<label for="institution">Instituição:</label>
-										<input
-											id="institution"
-											type="text"
-											[(ngModel)]="users.institution"
-											name="institution"
-											class="form-control border-input"
-											placeholder="Instituição">
-									</div>
-								</div>
-							</div>
 
 							<div *ngIf="!isEdit" class="text-center">
 								<button

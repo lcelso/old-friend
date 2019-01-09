@@ -14,7 +14,7 @@ import { map } from 'rxjs/internal/operators/map';
 
 export class UserComponent implements OnInit {
 
-    private basePath = '/users';
+    private baseUserPath = '/users';
 
     id: any;
 
@@ -42,7 +42,9 @@ export class UserComponent implements OnInit {
 
     subtitle = 'Usuário criado com sucesso!';
 
+    numberPants = this.range(36, 25);
 
+    numberShoes = this.range(33, 16);
 
     constructor(
         private router: Router,
@@ -70,7 +72,7 @@ export class UserComponent implements OnInit {
             this.id = params.id;
         });
 
-        this.userService.getListData(this.basePath).snapshotChanges().pipe(
+        this.userService.getListData(this.baseUserPath).snapshotChanges().pipe(
             map(changes =>
               changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
             )
@@ -97,7 +99,7 @@ export class UserComponent implements OnInit {
     }
 
     updateUser() {
-        this.userService.updateUser(this.basePath, this.users.key, this.users);
+        this.userService.updateUser(this.baseUserPath, this.users.key, this.users);
     }
 
     saveUser() {
@@ -105,7 +107,7 @@ export class UserComponent implements OnInit {
         this.users.dateAct = this.dateAct;
         this.users.dateCad = this.dateCad;
 
-        this.userService.createUser(this.basePath, this.users);
+        this.userService.createUser(this.baseUserPath, this.users);
         this.users = new Users();
     }
 
@@ -119,6 +121,10 @@ export class UserComponent implements OnInit {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    range(start, end) {
+        return Array.from({length: end}, (x, i) => i + start);
     }
 
 }

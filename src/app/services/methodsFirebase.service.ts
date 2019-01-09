@@ -7,6 +7,7 @@ export class MethodsFirebaseService {
   constructor(private db: AngularFireDatabase) {}
 
   private listData(path) {
+    console.log(path)
     let data: AngularFireList<any> = null;
     data = this.db.list(path);
     return data;
